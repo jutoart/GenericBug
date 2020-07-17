@@ -14,4 +14,8 @@ struct GenericBugApp: App {
             ContentView()
         }
     }
+
+    func bugMethod<T: RawRepresentable>(defaultValue: @autoclosure (() -> T)) -> T {
+        defaultValue()
+    }
 }
